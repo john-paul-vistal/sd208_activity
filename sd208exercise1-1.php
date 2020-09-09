@@ -9,8 +9,8 @@
 <style>
 .square{
     display:inline-block;
-    width:110px;
-    height:110px;
+    width:100px;
+    height:100px;
     margin-top:-4px;
 }
 .black{
@@ -50,7 +50,6 @@ for($x = 0;$x < 8; $x++){
         $switch = false;
     }
 }
-
 ?>
 
     
