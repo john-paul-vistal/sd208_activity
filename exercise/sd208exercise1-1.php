@@ -9,8 +9,8 @@
 <style>
 .square{
     display:inline-block;
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
     margin-top:-4px;
 }
 .black{
@@ -21,8 +21,11 @@
     border:solid black 1px;
     background-color:white;
 }
+
+
 </style>
 <body>
+<div style="width:700px;">
 <?php 
 $switch = false;
 for($x = 0;$x < 8; $x++){
@@ -51,7 +54,7 @@ for($x = 0;$x < 8; $x++){
     }
 }
 ?>
-
+</div>
     
 </body>
 </html>
