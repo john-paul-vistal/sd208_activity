@@ -4,7 +4,7 @@ html {
 }
 
 html {
-    background: linear-gradient(rgb(89, 202, 255), rgb(195, 195, 195)) no-repeat center center fixed;
+    background: linear-gradient(#36d1dc, #5b86e5) no-repeat center center fixed;
     background-size: cover;
 }
 
