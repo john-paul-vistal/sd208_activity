@@ -15,8 +15,6 @@ if(isset($_POST['compute'])){
             $error2 = "PLEASE INPUT A VALID NUMBER";
         }
     }
-
-
 }
 ?>
 
