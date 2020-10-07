@@ -26,4 +26,10 @@ if(isset($_POST['remove'])){
     header("Location:index.php");
 }
 
+
+if(isset($_POST['clearAll'])){
+    unset($_SESSION['bookmarks']);
+    header("Location:index.php");
+}
+
 ?>
