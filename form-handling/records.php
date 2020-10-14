@@ -17,6 +17,21 @@ if(!$conn){
 $sql = "SELECT * FROM users_records";
 $result = mysqli_query($conn,$sql);
 
+
+if(isset($_POST['delete'])){
+    $id =  $_POST['id'];
+    $sql = "DELETE FROM users_records WHERE id = '$id'";
+    if(mysqli_query($conn,$sql)){
+        mysqli_close($conn);
+        header("Location:records.php");
+    }else{
+        echo "Error ".$sql."<br>".mysqli_error($conn);
+    }
+    
+}
+
+
+mysqli_close($conn);
 ?>
 
 
@@ -34,6 +49,7 @@ $result = mysqli_query($conn,$sql);
 
     <div class="container">
         <h1>Records</h1>
+        <a href = "index.php"> <button class="btn-md">Add</button></a>
         <table>
             <tr class="tableheader">
                 <th>FIRST NAME</th>
@@ -54,9 +70,11 @@ $result = mysqli_query($conn,$sql);
                 <td><?php echo $row["lName"]?></td>
                 <td><?php echo $row["email"]?></td>
                 <td class="center">
-                    <input type="hidden" name="index" value="<?php  echo $row["id"] ?>">
-                    <button type="submit" class="close" name="delete">Delete</button>
-                    <button type="submit" class="update" name="delete">Update</button>
+                    <form action="records.php" method = "POST">
+                    <input type="hidden" name="id" value="<?php  echo $row["id"] ?>">
+                    <button type="submit" class="close" name="delete">Delete</button> 
+                </form>
+                <a href = "update.php?id=<?php echo $row["id"]?>"><button  class="update" name="update">Update</button></a>
                 </td>
             </tr>
 

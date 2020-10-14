@@ -47,12 +47,6 @@ if(isset($_POST["save"])){
 
 }
 
-
-
-
-
-
-
 ?>
 
 
@@ -68,7 +62,7 @@ if(isset($_POST["save"])){
 
 <body>
     <form class="form" action="index.php" method="POST">
-        <h1 style="margin-top:100px;margin-bottom: 60px;">Registration Form</h1>
+        <h1 style="margin-top:60px;margin-bottom: 60px;">Registration Form</h1>
         <label for="">First Name</label>
         <input type="text" name="firstName" required>
         <label for="">Last Name</label>
@@ -78,6 +72,7 @@ if(isset($_POST["save"])){
         <label for="">Password</label>
         <input type="text" name="password" required>
         <button class="btn" type="submit" name="save">Save</button>
+        <a href="records.php"><h4 style= "margin-top:150px">Proceed to records</h4></a>
     </form>
 
 

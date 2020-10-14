@@ -13,9 +13,9 @@ html {
     color: rgb(228, 228, 228);
     padding: 10px;
     position: relative;
-    float: right;
+    margin: auto;
     background: linear-gradient(0deg, #712eeed2, #2a46c3c9);
-    height: 870px;
+    height: 700px;
     width: 55%;
     box-shadow: 0px 0px 5px #bdbdbd;
     border-radius: 10px;
@@ -54,7 +54,8 @@ label {
     padding-bottom: 20px;
     border: none;
     border-radius: 5px;
-    background: #1fbd46
+    background: #1fbd46;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -63,7 +64,27 @@ label {
     box-shadow: 0px 0px 3px rgb(153, 153, 153);
 }
 
+.btn-md {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #1fbd46
+}
+
+.btn-md:hover {
+    background: #199c39;
+    color: white;
+    box-shadow: 0px 0px 3px rgb(153, 153, 153);
+}
+
 .container {
+    position: relative;
     background: rgba(255, 255, 255, 0.877);
     padding: 10px;
     border-radius: 5px;
@@ -84,7 +105,7 @@ table {
 
 td,
 th {
-    border: 1px solid #dddddd;
+    border: none;
     text-align: left;
     padding: 8px;
 }
@@ -117,5 +138,5 @@ tr:nth-child(even) {
     background: rgb(219, 205, 8);
     border-radius: 5px;
     color: white;
-    margin-left: 20px;
+    margin-top: 10px;
 }
