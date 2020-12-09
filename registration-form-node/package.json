@@ -1,0 +1,18 @@
+{
+    "name": "registration-form",
+    "version": "1.0.0",
+    "description": "\"Registration form for Web Dev Activity\"",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "John Paul Vistal",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.6"
+    }
+}

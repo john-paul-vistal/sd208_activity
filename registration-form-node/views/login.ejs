@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    
+    .logo {
+        width: 250px;
+    }
+    
+    @media (max-width:750px) {
+        .logo {
+            width: 150px;
+        }
+        .logoInstruction {
+            width: 100px;
+        }
+        .main {
+            margin-top: 50px;
+            width: 85%;
+        }
+        .icon {
+            /* display: none; */
+            position: absolute;
+            top: 30px;
+            left: -1px;
+        }
+    }
+</style>
+
+<body class="bg-light">
+    <center>
+        <div class="wrapper fadeInDown">
+            <div class="main shadow-lg p-5 mb-5 bg-white rounded center">
+                <div class="fadeIn first">
+                    <img class="logo center rounded-circle" src="/public/img/profile.jpg" id="icon" alt="User Icon" />
+                </div>
+                <form action="/student.mis/authenticate" method="POST" autocomplete="off">
+                    <div class="form-group" style="position: relative;">
+                        <label for="email" class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </label>&nbsp;&nbsp;
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group" style="position: relative;">
+                        <label for="email" class="icon">
+                            <i class="fa fa-key"></i>
+                        </label>&nbsp;&nbsp;
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <p class="text-danger">
+                        <%=error%>
+                    </p>
+                    <button type="submit" class="btn btn-primary btn-block mt-3 px-5 py-2" style="border-radius: 30px;">Login</button>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
